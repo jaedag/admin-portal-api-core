@@ -1,3 +1,4 @@
+import { Member } from '..'
 import { Network, NetworkCode } from './types'
 
 export const getMobileCode = (network: Network): NetworkCode => {
@@ -27,4 +28,60 @@ export const padNumbers = (number: number): string => {
     return ''
   }
   return number.toString().padStart(12, '0')
+}
+
+export const paystackAxiosReq = {
+  updatePaystackCustomerBody: (auth: string, customer: Member) => ({
+    method: 'put',
+    baseURL: 'https://api.paystack.co/',
+    url: `/customer/${customer.email}`,
+    headers: {
+      'content-type': 'application/json',
+      Authorization: auth ?? '',
+    },
+    data: {
+      first_name: customer.firstName,
+      last_name: customer.lastName,
+      phone: customer.phoneNumber,
+    },
+  }),
+
+  iniitiatePaystackTransaction: ({
+    auth,
+    amount,
+    customer,
+    mobileNumber,
+    mobileNetwork,
+    subaccount,
+    customFields,
+  }: {
+    auth: string
+    amount: number
+    customer: Member
+    mobileNumber: string
+    mobileNetwork: Network
+    subaccount: string
+    customFields?: { [key: string]: string }
+  }) => ({
+    method: 'post',
+    baseURL: 'https://api.paystack.co/',
+    url: `/charge`,
+    headers: {
+      'content-type': 'application/json',
+      Authorization: auth,
+    },
+    data: {
+      amount: addPaystackCharge(amount),
+      email: customer.email,
+      currency: 'GHS',
+      subaccount,
+      mobile_money: {
+        phone: mobileNumber,
+        provider: getMobileCode(mobileNetwork),
+      },
+      metadata: {
+        custom_fields: [customFields],
+      },
+    },
+  }),
 }
