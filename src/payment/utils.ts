@@ -21,7 +21,7 @@ export const getMobileCode = (network: Network): NetworkCode => {
 }
 
 export const addPaystackCharge = (amount: number): number =>
-  Math.round((amount / (1 - 0.0195) + 0.01) * 100) / 100
+  Math.round((amount / (1 - 0.0195) + 0.01) * 100)
 
 export const padNumbers = (number: number): string => {
   if (!number) {
