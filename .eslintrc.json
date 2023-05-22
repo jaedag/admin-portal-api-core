@@ -28,20 +28,7 @@
   },
   "rules": {
     "prettier/prettier": "warn",
-    "react/prop-types": "error",
     "no-unused-vars": "error",
-    "no-console": "error",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".tsx", ".ts"]
-      }
-    ],
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": "arrow-function"
-      }
-    ]
+    "no-console": "error"
   }
 }
