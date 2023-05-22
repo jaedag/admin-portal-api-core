@@ -31,7 +31,13 @@ export const padNumbers = (number: number): string => {
 }
 
 export const paystackAxiosReq = {
-  updatePaystackCustomerBody: (auth: string, customer: Member) => ({
+  updatePaystackCustomerBody: ({
+    auth,
+    customer,
+  }: {
+    auth: string
+    customer: Member
+  }) => ({
     method: 'put',
     baseURL: 'https://api.paystack.co/',
     url: `/customer/${customer.email}`,
