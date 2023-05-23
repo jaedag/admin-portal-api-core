@@ -25,10 +25,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/jd_addy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaedag/admin-portal-api-core.git"
-  },
   "keywords": [
     "api",
     "admin-portal",
