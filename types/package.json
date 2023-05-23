@@ -1,0 +1,43 @@
+{
+  "name": "@jaedag/admin-portal-api-core/types",
+  "version": "1.0.9",
+  "description": "Tools for working with admin=portal-core api",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c",
+    "test": "jest --watch",
+    "release:major": "node scripts/release.js major",
+    "release:minor": "node scripts/release.js minor",
+    "release:patch": "node scripts/release.js patch",
+    "release:test": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'"
+  },
+  "browser": {
+    "^@/$": "./src/"
+  },
+  "eslintIgnore": [
+    "*.test.ts"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/jd_addy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaedag/admin-portal-api-core.git"
+  },
+  "keywords": [
+    "api",
+    "admin-portal",
+    "core"
+  ],
+  "author": "John-Dag Addy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaedag/admin-portal-api-core/issues"
+  },
+  "homepage": "https://github.com/jaedag/admin-portal-core#readme"
+}

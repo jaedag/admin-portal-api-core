@@ -44,7 +44,12 @@ export interface Church {
 export interface Stream extends Church {
   arrivalEndTime: string
   arrivalsPrefix: string
-  accountName: 'aes_account' | 'ges_account' | 'hge_account' | 'fle_account'
+  accountName:
+    | 'aes_account'
+    | 'ges_account'
+    | 'hge_account'
+    | 'fle_account'
+    | 'manual'
   mobilisationEndTime: string
   mobilisationStartTime: string
   arrivalStartTime: string

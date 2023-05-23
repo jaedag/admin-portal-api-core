@@ -1,5 +1,4 @@
-import { Member } from '..'
-import { Network, NetworkCode } from './types'
+import { Member, Network, NetworkCode } from '..'
 
 export const getMobileCode = (network: Network): NetworkCode => {
   switch (network) {

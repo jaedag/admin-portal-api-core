@@ -1,4 +1,4 @@
 export * from './utils'
-export * from './types'
+export * from '../types/src'
 export * from './auth'
 export * from './payment'
