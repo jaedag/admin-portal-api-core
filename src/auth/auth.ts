@@ -1,4 +1,4 @@
-import { Role } from '@/types'
+import { Role } from '@jaedag/admin-portal-types'
 
 export const isAuth = (permittedRoles: Role[], userRoles?: Role[]) => {
   if (!permittedRoles.some((r) => userRoles?.includes(r))) {

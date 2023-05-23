@@ -1,4 +1,4 @@
-import { Member, Network, NetworkCode } from '..'
+import { Member, Network, NetworkCode } from '@jaedag/admin-portal-types'
 
 export const getMobileCode = (network: Network): NetworkCode => {
   switch (network) {

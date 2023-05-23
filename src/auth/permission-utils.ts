@@ -1,5 +1,4 @@
-import { Role } from '../types'
-import { ChurchLevel } from '../types'
+import { ChurchLevel, Role } from '@jaedag/admin-portal-types'
 
 export const permitLeader = (churchLevel: ChurchLevel) => {
   let permittedFor: Role[] = []
