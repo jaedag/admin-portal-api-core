@@ -2,6 +2,14 @@
 
 ##### Documentation Changes
 
+*  update CHANGELOG.md and version bump ([28cba017](https://github.com/jaedag/admin-portal-api-core/commit/28cba017bdbab45d634208a53ed64d85569fab6c))
+*  update CHANGELOG.md and version bump ([77bb740a](https://github.com/jaedag/admin-portal-api-core/commit/77bb740adca5bfc5d842aa90f3b577bbbda587f0))
+*  update CHANGELOG.md and version bump ([5f03e07c](https://github.com/jaedag/admin-portal-api-core/commit/5f03e07c911ee6c59cac0f59f084c093a650c1dc))
+
+#### 1.0.14 (2023-06-08)
+
+##### Documentation Changes
+
 *  update CHANGELOG.md and version bump ([77bb740a](https://github.com/jaedag/admin-portal-api-core/commit/77bb740adca5bfc5d842aa90f3b577bbbda587f0))
 *  update CHANGELOG.md and version bump ([5f03e07c](https://github.com/jaedag/admin-portal-api-core/commit/5f03e07c911ee6c59cac0f59f084c093a650c1dc))
 
