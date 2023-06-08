@@ -1,5 +1,11 @@
 #### 1.0.14 (2023-06-08)
 
+##### Documentation Changes
+
+*  update CHANGELOG.md and version bump ([5f03e07c](https://github.com/jaedag/admin-portal-api-core/commit/5f03e07c911ee6c59cac0f59f084c093a650c1dc))
+
+#### 1.0.14 (2023-06-08)
+
 #### 1.0.13 (2023-06-08)
 
 #### 1.0.12 (2023-05-23)
