@@ -1,6 +1,6 @@
 {
   "name": "@jaedag/admin-portal-api-core",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Tools for working with admin=portal-core api",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
