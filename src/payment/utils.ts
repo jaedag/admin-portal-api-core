@@ -50,7 +50,7 @@ export const updatePaystackCustomerBody = ({
   },
 })
 
-export const iniitiatePaystackTransaction = ({
+export const initiatePaystackTransaction = ({
   auth,
   amount,
   customer,
