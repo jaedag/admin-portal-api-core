@@ -29,6 +29,12 @@ export const padNumbers = (number: number): string => {
   return number.toString().padStart(12, '0')
 }
 
+export const transactionTimeBeforeConfirmationRange = (
+  transactionTime: string
+): boolean => {
+  return new Date().getTime() - new Date(transactionTime).getTime() < 60000
+}
+
 export const updatePaystackCustomerBody = ({
   auth,
   customer,
