@@ -32,7 +32,7 @@ export const padNumbers = (number: number): string => {
 export const transactionTimeBeforeConfirmationRange = (
   transactionTime: string
 ): boolean => {
-  return new Date().getTime() - new Date(transactionTime).getTime() < 60000
+  return new Date().getTime() - new Date(transactionTime).getTime() < 180000
 }
 
 export const updatePaystackCustomerBody = ({
