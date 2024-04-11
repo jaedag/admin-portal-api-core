@@ -79,12 +79,14 @@ export const initiatePaystackCharge = ({
   subaccount: string
   customFields?: { [key: string]: string }
 }) => {
-  if (card?.cvv.toString().length !== 3) {
-    throw new Error('cvv must be 3 digits long')
-  }
+  if (card) {
+    if (card?.cvv.toString().length !== 3) {
+      throw new Error('cvv must be 3 digits long')
+    }
 
-  if (card?.expiry_month < 1 || card?.expiry_month > 12) {
-    throw new Error('expiry_month must be between 1 and 12')
+    if (card?.expiry_month < 1 || card?.expiry_month > 12) {
+      throw new Error('expiry_month must be between 1 and 12')
+    }
   }
 
   return {
