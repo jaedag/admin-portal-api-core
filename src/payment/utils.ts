@@ -113,3 +113,25 @@ export const initiatePaystackCharge = ({
     },
   }
 }
+
+export const sendTransactionOTP = ({
+  auth,
+  reference,
+  otp,
+}: {
+  auth: string
+  reference: string
+  otp: string
+}) => ({
+  method: 'post',
+  baseURL: 'https://api.paystack.co/',
+  url: `/charge/submit_otp`,
+  headers: {
+    'content-type': 'application/json',
+    Authorization: auth,
+  },
+  data: {
+    otp,
+    reference,
+  },
+})
