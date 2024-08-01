@@ -61,11 +61,13 @@ export const initiatePaystackCharge = ({
   mobile_money,
   card,
   subaccount,
+  bearCharges = false,
   customFields,
 }: {
   auth: string
   amount: number
   customer: Member
+  bearCharges?: boolean
   mobile_money?: {
     phone: string
     provider: Network
@@ -98,7 +100,7 @@ export const initiatePaystackCharge = ({
       Authorization: auth,
     },
     data: {
-      amount: addPaystackCharge(amount),
+      amount: bearCharges ? amount : addPaystackCharge(amount),
       email: customer.email,
       currency: 'GHS',
       subaccount,
