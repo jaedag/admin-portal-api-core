@@ -114,7 +114,7 @@ export const initiatePaystackCharge = ({
   }
 }
 
-export const sendTransactionOTP = ({
+export const submitTransactionOTP = ({
   auth,
   reference,
   otp,
@@ -133,5 +133,21 @@ export const sendTransactionOTP = ({
   data: {
     otp,
     reference,
+  },
+})
+
+export const confirmTransactionStatus = ({
+  auth,
+  reference,
+}: {
+  auth: string
+  reference: string
+}) => ({
+  method: 'get',
+  baseURL: 'https://api.paystack.co/',
+  url: `/transaction/verify/${reference}`,
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: auth,
   },
 })
