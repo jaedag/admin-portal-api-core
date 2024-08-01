@@ -100,7 +100,7 @@ export const initiatePaystackCharge = ({
       Authorization: auth,
     },
     data: {
-      amount: bearCharges ? amount : addPaystackCharge(amount),
+      amount: bearCharges ? amount * 100 : addPaystackCharge(amount),
       email: customer.email,
       currency: 'GHS',
       subaccount,
