@@ -20,6 +20,9 @@ export const getMobileCode = (network: Network): NetworkCode => {
 export const addPaystackCharge = (amount: number): number =>
   Math.round((amount / (1 - 0.0195) + 0.01) * 100)
 
+export const noChargePaystack = (amount: number): number =>
+  Math.round(amount * 100)
+
 export const padNumbers = (number: number): string => {
   if (!number) {
     return ''
@@ -100,7 +103,9 @@ export const initiatePaystackCharge = ({
       Authorization: auth,
     },
     data: {
-      amount: bearCharges ? amount * 100 : addPaystackCharge(amount),
+      amount: bearCharges
+        ? noChargePaystack(amount)
+        : addPaystackCharge(amount),
       email: customer.email,
       currency: 'GHS',
       subaccount,
